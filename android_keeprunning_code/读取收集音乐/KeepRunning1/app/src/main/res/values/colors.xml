@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="account_input_color">#c9c9c9</color>
+    <color name="login_input_active">#31b968</color>
+    <color name="account_pressed_true">#14b94d</color>
+    <color name="white">#FFFFFF</color>
+</resources>

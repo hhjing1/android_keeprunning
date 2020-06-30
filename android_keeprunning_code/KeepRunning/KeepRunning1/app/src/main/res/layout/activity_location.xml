@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:id="@+id/sport_content"
+    tools:context="com.maplocation.DynamicDemo">
+    <RelativeLayout
+        android:id="@+id/rlMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sport_change_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/startguiji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_edge"
+                android:drawableStart="@mipmap/run_mode"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+
+                android:text="开始运动"
+                android:textColor="@color/red"
+                android:textColorLink="@color/red"
+                android:textSize="@dimen/textsize_8"
+                android:layout_marginLeft="@dimen/margin_edge"
+                android:drawableLeft="@mipmap/map_mode" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="时间提醒" />
+            <EditText
+                android:id="@+id/setTimeEdit"
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="10px"
+
+                android:width="2dp"
+                android:maxLength="4"
+                android:text="1"
+                android:ems="3"
+                android:inputType="number" >
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0px"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="分钟" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_edge_20"
+        android:layout_marginTop="110dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_edge_20">
+        <Chronometer
+            android:id="@+id/cm_passtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:format="00:00:00"
+            android:gravity="center"
+            android:textColor="@color/text_color_white"
+            android:textSize="65sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_edge_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvMileage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="8"
+                android:text="00.00"
+                android:textColor="@color/text_color_white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="2.5dp"
+                android:text="千米"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/textsize_2"
+                android:layout_marginLeft="6dp" />
+
+            <TextView
+                android:id="@+id/tvSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_edge_20"
+                android:ellipsize="end"
+                android:maxLength="8"
+                android:text="0.00"
+                android:textColor="@color/text_color_white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_edge_20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="2.5dp"
+                android:text="均速(米/秒)"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/textsize_2"
+                android:layout_marginLeft="6dp" />
+            <TextView
+                android:id="@+id/tvcalor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_edge_20"
+                android:ellipsize="end"
+                android:maxLength="8"
+                android:text="00.00"
+                android:textColor="@color/text_color_white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_edge_20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="2.5dp"
+                android:text="卡"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/textsize_2"
+                android:layout_marginLeft="6dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="80dip"
+        android:background="@color/baise"
+        android:minWidth="100dip"
+        android:orientation="vertical"
+        android:padding="2dp" >
+
+        <ToggleButton android:id="@+id/togglebutton"
+            android:layout_width="140dip"
+            android:layout_height="wrap_content"
+            android:textOn="普通地图"
+            android:textOff="热力地图"
+            android:textColor="@color/darkmagenta"
+            android:background="@color/baise"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="130dip"
+        android:background="@color/baise"
+        android:minWidth="100dip"
+        android:orientation="vertical"
+        android:padding="2dp" >
+
+        <Button
+            android:id="@+id/button1"
+            android:text="罗盘"
+            android:layout_width="140dip"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orangered"
+            android:background="@color/baise"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+</RelativeLayout>

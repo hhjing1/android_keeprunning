@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/first"
+            android:icon="@drawable/map"
+            android:title="首页" />
+        <item
+            android:id="@+id/collect"
+            android:icon="@drawable/alarm"
+            android:title="闹钟" />
+        <item
+            android:id="@+id/top"
+            android:icon="@drawable/music"
+            android:title="音乐" />
+    </group>
+    <item android:title="设置">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/setting"
+                    android:icon="@drawable/setting"
+                    android:title="个人设置" />
+                <item
+                    android:id="@+id/update"
+                    android:icon="@drawable/update"
+                    android:title="版本更新" />
+                <item
+                    android:id="@+id/fankui"
+                    android:icon="@drawable/suggess"
+                    android:title="用户反馈" />
+                <item
+                    android:id="@+id/quit"
+                    android:icon="@drawable/home"
+                    android:title="退出" />
+            </group>
+        </menu>
+    </item>
+</menu>

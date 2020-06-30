@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:id="@+id/sport_content"
+    tools:context="com.maplocation.StaticDemo">
+    <RelativeLayout
+        android:id="@+id/rlMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sport_change_bg">
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_edge_20"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_edge_20">
+        <Chronometer
+            android:id="@+id/cm_passtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:format="00:00:00"
+            android:gravity="center"
+            android:textColor="@color/text_color_white"
+            android:textSize="65sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_edge_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvMileage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="8"
+                android:text="00.00"
+                android:textColor="@color/text_color_white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="2.5dp"
+                android:text="千米"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/textsize_2"
+                android:layout_marginLeft="6dp" />
+
+            <TextView
+                android:id="@+id/tvSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_edge_20"
+                android:ellipsize="end"
+                android:maxLength="8"
+                android:text="0.00"
+                android:textColor="@color/text_color_white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_edge_20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="2.5dp"
+                android:text="均速(米/秒)"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/textsize_2"
+                android:layout_marginLeft="6dp" />
+            <TextView
+                android:id="@+id/tvcalor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_edge_20"
+                android:ellipsize="end"
+                android:maxLength="8"
+                android:text="00.00"
+                android:textColor="@color/text_color_white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_edge_20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="2.5dp"
+                android:text="卡"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/textsize_2"
+                android:layout_marginLeft="6dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingBottom="130dp">
+
+        <Button
+            android:id="@+id/tv11"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:background="@drawable/sport_white_round"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/text_color_green"
+            android:textSize="28sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

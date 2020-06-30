@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg2"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+       android:layout_height="match_parent"
+       android:layout_width="match_parent"
+       android:layout_above="@id/local_music_bottomlayout"
+       android:fillViewport="true">
+
+    <ListView
+        android:id="@+id/music_list"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:dividerHeight="10dp"/>
+
+</ScrollView>
+
+
+    <RelativeLayout
+         android:background="#33EEEEEE"
+         android:layout_height="70dp"
+         android:layout_width="match_parent"
+         android:id="@+id/local_music_bottomlayout"
+         android:layout_alignParentBottom="true">
+
+    <ImageView
+        android:background="#9933FA"
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"/>
+
+    <ImageView
+        android:layout_height="60dp"
+        android:layout_width="60dp"
+        android:id="@+id/local_music_bottom_iv_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_song"/>
+    //歌名显示
+
+    <TextView
+        android:id="@+id/local_music_botton_tv_song"
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:ellipsize = "end"
+        android:layout_toRightOf="@+id/local_music_bottom_iv_icon"
+        android:text=""/>
+    //歌手显示
+    <TextView
+        android:id="@+id/local_music_bottom_tv_singer"
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:ellipsize = "end"
+        android:text=""
+        android:layout_alignLeft="@+id/local_music_botton_tv_song"
+        android:layout_below="@+id/local_music_botton_tv_song"/>
+
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/local_music_bottom_iv_next"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_next"
+
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/local_music_bottom_iv_play"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_play"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/local_music_bottom_iv_next"/>
+
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/local_music_bottom_iv_last"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_last"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/local_music_bottom_iv_play"/>
+
+</RelativeLayout>
+
+</RelativeLayout>
